@@ -1,0 +1,33 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="cutcUtzUbic">
+            <h2><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.detail.title">Cutc Utz Ubic</span> {{cutcUtzUbic.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbCdUtz">Db Cd Utz</span></dt>
+                <dd>
+                    <span>{{cutcUtzUbic.dbCdUtz}}</span>
+                </dd>
+                <dt><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.chiave">Chiave</span></dt>
+                <dd>
+                    <div *ngIf="cutcUtzUbic.chiave">
+                        <a [routerLink]="['/bbba-geo-01-my-suffix', cutcUtzUbic.chiave?.id, 'view']">{{cutcUtzUbic.chiave?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/cutc-utz-ubic-my-suffix', cutcUtzUbic.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
