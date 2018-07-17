@@ -1,0 +1,48 @@
+
+{
+    "georeferenziazioneApp": {
+        "cutcUtzUbic" : {
+            "home": {
+                "title": "CutcUtzUbics",
+                "createLabel": "Genera un nuovo Cutc Utz Ubic",
+                "createOrEditLabel": "Genera o modifica un Cutc Utz Ubic"
+            },
+            "created": "&Egrave; stato generato un nuovo Cutc Utz Ubic con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Cutc Utz Ubic identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Cutc Utz Ubic con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Cutc Utz Ubic {{ id }}?"
+            },
+            "detail": {
+                "title": "Cutc Utz Ubic"
+            },
+            "dbCdUtz": "Db Cd Utz",
+            "idTiUtz": "Id Ti Utz",
+            "cdtiUtz": "Cdti Utz",
+            "dbTiUtz": "Db Ti Utz",
+            "idBas11": "Id Bas 11",
+            "cdStrd": "Cd Strd",
+            "dbPosta": "Db Posta",
+            "dbAlfab": "Db Alfab",
+            "dbPercIni": "Db Perc Ini",
+            "dbPercFinal": "Db Perc Final",
+            "dtCanc": "Dt Canc",
+            "niCiv": "Ni Civ",
+            "dbLetteCiv": "Db Lette Civ",
+            "tiColoreCiv": "Ti Colore Civ",
+            "cdUniUrb": "Cd Uni Urb",
+            "dbUniUrb": "Db Uni Urb",
+            "cdCircs": "Cd Circs",
+            "dbCircs": "Db Circs",
+            "cdCap": "Cd Cap",
+            "cdSezVig": "Cd Sez Vig",
+            "dbSezVig": "Db Sez Vig",
+            "niInterno": "Ni Interno",
+            "dbLetteInterno": "Db Lette Interno",
+            "dbInternoScala": "Db Interno Scala",
+            "flAllin": "Fl Allin",
+            "idEnte": "Id Ente",
+            "chiave": "Chiave"
+        }
+    }
+}
