@@ -1,0 +1,21 @@
+{
+    "name": "BbaGeo02Classi",
+    "fields": [
+        {
+            "fieldName": "dbClasse",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20180717105836",
+    "javadoc": "not an ignored comment",
+    "entityTableName": "bba_geo_02_classi",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mySuffix"
+}
