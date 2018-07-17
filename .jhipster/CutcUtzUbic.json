@@ -1,0 +1,27 @@
+{
+    "name": "CutcUtzUbic",
+    "fields": [
+        {
+            "fieldName": "dbCdUtz",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "chiave",
+            "otherEntityName": "bbbaGeo01",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180717110115",
+    "entityTableName": "cutc_utz_ubic",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mySuffix"
+}

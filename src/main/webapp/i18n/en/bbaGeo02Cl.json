@@ -1,0 +1,22 @@
+
+{
+    "georeferenziazioneApp": {
+        "bbaGeo02Cl" : {
+            "home": {
+                "title": "Bba Geo 02 Cls",
+                "createLabel": "Create a new Bba Geo 02 Cl",
+                "createOrEditLabel": "Create or edit a Bba Geo 02 Cl"
+            },
+            "created": "A new Bba Geo 02 Cl is created with identifier {{ param }}",
+            "updated": "A Bba Geo 02 Cl is updated with identifier {{ param }}",
+            "deleted": "A Bba Geo 02 Cl is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Bba Geo 02 Cl {{ id }}?"
+            },
+            "detail": {
+                "title": "Bba Geo 02 Cl"
+            },
+            "dbClasse": "Db Classe"
+        }
+    }
+}
