@@ -1,0 +1,31 @@
+{
+    "name": "BbbaGeo01Coord",
+    "fields": [
+        {
+            "fieldName": "coordx",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "coordy",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "chiave",
+            "otherEntityName": "bbaGeo02Classi",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180717110022",
+    "entityTableName": "bbba_geo_01_coord",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mySuffix"
+}
