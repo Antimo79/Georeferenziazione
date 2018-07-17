@@ -1,0 +1,29 @@
+entity CutcUtzUbic {
+	id String,
+    dbCdUtz String,
+    
+}
+
+entity BbbaGeo01 {
+	id String,
+    coordx String,
+    coordy String,
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity BbaGeo02Cl {
+	id String,
+	dbClasse String,
+}
+relationship ManyToOne {
+	BbbaGeo01{chiave} to BbaGeo02Cl
+}
+relationship ManyToOne {
+	CutcUtzUbic{chiave} to BbbaGeo01
+}
+
+// Set service options to all except few
+service all with serviceImpl
+// Set an angular suffix
+angularSuffix * with mySuffix
