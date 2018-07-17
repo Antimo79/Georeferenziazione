@@ -1,0 +1,24 @@
+
+{
+    "georeferenziazioneApp": {
+        "bbbaGeo01" : {
+            "home": {
+                "title": "Bbba Geo 01 S",
+                "createLabel": "Create a new Bbba Geo 01",
+                "createOrEditLabel": "Create or edit a Bbba Geo 01"
+            },
+            "created": "A new Bbba Geo 01 is created with identifier {{ param }}",
+            "updated": "A Bbba Geo 01 is updated with identifier {{ param }}",
+            "deleted": "A Bbba Geo 01 is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Bbba Geo 01 {{ id }}?"
+            },
+            "detail": {
+                "title": "Bbba Geo 01"
+            },
+            "coordx": "Coordx",
+            "coordy": "Coordy",
+            "chiave": "Chiave"
+        }
+    }
+}

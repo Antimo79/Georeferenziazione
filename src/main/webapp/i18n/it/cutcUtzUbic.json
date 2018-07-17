@@ -1,0 +1,23 @@
+
+{
+    "georeferenziazioneApp": {
+        "cutcUtzUbic" : {
+            "home": {
+                "title": "CutcUtzUbics",
+                "createLabel": "Genera un nuovo Cutc Utz Ubic",
+                "createOrEditLabel": "Genera o modifica un Cutc Utz Ubic"
+            },
+            "created": "&Egrave; stato generato un nuovo Cutc Utz Ubic con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Cutc Utz Ubic identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Cutc Utz Ubic con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Cutc Utz Ubic {{ id }}?"
+            },
+            "detail": {
+                "title": "Cutc Utz Ubic"
+            },
+            "dbCdUtz": "Db Cd Utz",
+            "chiave": "Chiave"
+        }
+    }
+}

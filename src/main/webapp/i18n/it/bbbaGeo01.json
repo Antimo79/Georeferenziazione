@@ -1,0 +1,24 @@
+
+{
+    "georeferenziazioneApp": {
+        "bbbaGeo01" : {
+            "home": {
+                "title": "BbbaGeo01S",
+                "createLabel": "Genera un nuovo Bbba Geo 01",
+                "createOrEditLabel": "Genera o modifica un Bbba Geo 01"
+            },
+            "created": "&Egrave; stato generato un nuovo Bbba Geo 01 con identificatore {{ param }}",
+            "updated": "&Egrave; stato aggiornato Bbba Geo 01 identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Bbba Geo 01 con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Bbba Geo 01 {{ id }}?"
+            },
+            "detail": {
+                "title": "Bbba Geo 01"
+            },
+            "coordx": "Coordx",
+            "coordy": "Coordy",
+            "chiave": "Chiave"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="bbaGeo02Cl">
+            <h2><span jhiTranslate="georeferenziazioneApp.bbaGeo02Cl.detail.title">Bba Geo 02 Cl</span> {{bbaGeo02Cl.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="georeferenziazioneApp.bbaGeo02Cl.dbClasse">Db Classe</span></dt>
+                <dd>
+                    <span>{{bbaGeo02Cl.dbClasse}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/bba-geo-02-cl-my-suffix', bbaGeo02Cl.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
