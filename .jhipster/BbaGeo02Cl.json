@@ -1,0 +1,37 @@
+{
+    "name": "BbaGeo02Cl",
+    "fields": [
+        {
+            "fieldName": "dbClasse",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idApl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cdTiDocInde",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dbNmClasse",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idEnte",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20180718123519",
+    "javadoc": "not an ignored comment",
+    "entityTableName": "bba_geo_02_cl",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mySuffix"
+}
