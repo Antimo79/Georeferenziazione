@@ -12,7 +12,7 @@ import java.util.Objects;
  * A CutcUtzUbic.
  */
 @Entity
-@Table(name = "cutc_utz_ubic")
+@Table(name = "CUTV_UTZ_UBIC_DATI")
 public class CutcUtzUbic implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -20,7 +20,7 @@ public class CutcUtzUbic implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
-    private Long id;
+    private String id;
 
     @Column(name = "db_cd_utz")
     private String dbCdUtz;
@@ -28,7 +28,7 @@ public class CutcUtzUbic implements Serializable {
     @Column(name = "id_ti_utz")
     private String idTiUtz;
 
-    @Column(name = "cdti_utz")
+    @Column(name = "cd_ti_utz")
     private String cdtiUtz;
 
     @Column(name = "db_ti_utz")
@@ -108,11 +108,11 @@ public class CutcUtzUbic implements Serializable {
     private BbaGeo01 chiave;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
