@@ -1,0 +1,72 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="georeferenziazioneApp.bbbaGeo01.home.title">Bbba Geo 01 S</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-bbba-geo-01-my-suffix" [routerLink]="['/bbba-geo-01-my-suffix/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="georeferenziazioneApp.bbbaGeo01.home.createLabel">
+            Create new Bbba Geo 01
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="bbbaGeo01S">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.bbbaGeo01.coordx">Coordx</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.bbbaGeo01.coordy">Coordy</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.bbbaGeo01.sisRif">Sis Rif</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.bbbaGeo01.idRecInt">Id Rec Int</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.bbbaGeo01.idRecEst">Id Rec Est</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.bbbaGeo01.idEnte">Id Ente</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.bbbaGeo01.idClasse">Id Classe</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.bbbaGeo01.chiave">Chiave</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let bbbaGeo01 of bbbaGeo01S ;trackBy: trackId">
+                <td><a [routerLink]="['/bbba-geo-01-my-suffix', bbbaGeo01.id, 'view' ]">{{bbbaGeo01.id}}</a></td>
+                <td>{{bbbaGeo01.coordx}}</td>
+                <td>{{bbbaGeo01.coordy}}</td>
+                <td>{{bbbaGeo01.sisRif}}</td>
+                <td>{{bbbaGeo01.idRecInt}}</td>
+                <td>{{bbbaGeo01.idRecEst}}</td>
+                <td>{{bbbaGeo01.idEnte}}</td>
+                <td>{{bbbaGeo01.idClasse}}</td>
+                <td>
+                    <div *ngIf="bbbaGeo01.chiave">
+                        <a [routerLink]="['../bba-geo-02-cl-my-suffix', bbbaGeo01.chiave?.id, 'view' ]" >{{bbbaGeo01.chiave?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/bbba-geo-01-my-suffix', bbbaGeo01.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/bbba-geo-01-my-suffix', bbbaGeo01.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'bbba-geo-01-my-suffix/'+ bbbaGeo01.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
