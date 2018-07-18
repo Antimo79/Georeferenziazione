@@ -12,7 +12,7 @@ import java.util.Objects;
  */
 @ApiModel(description = "not an ignored comment")
 @Entity
-@Table(name = "bba_geo_02_cl")
+@Table(name = "BBA_GEO02_CLASSI")
 public class BbaGeo02Cl implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -20,7 +20,7 @@ public class BbaGeo02Cl implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
-    private Long id;
+    private String id;
 
     @Column(name = "db_classe")
     private String dbClasse;
@@ -38,11 +38,11 @@ public class BbaGeo02Cl implements Serializable {
     private String idEnte;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
