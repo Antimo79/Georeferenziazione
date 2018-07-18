@@ -1,0 +1,168 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-cutc-utz-ubic-my-suffix-heading" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.home.createOrEditLabel">Create or edit a Cutc Utz Ubic</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!cutcUtzUbic.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="cutcUtzUbic.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbCdUtz" for="field_dbCdUtz">Db Cd Utz</label>
+                    <input type="text" class="form-control" name="dbCdUtz" id="field_dbCdUtz"
+                        [(ngModel)]="cutcUtzUbic.dbCdUtz" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.idTiUtz" for="field_idTiUtz">Id Ti Utz</label>
+                    <input type="text" class="form-control" name="idTiUtz" id="field_idTiUtz"
+                        [(ngModel)]="cutcUtzUbic.idTiUtz" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.cdtiUtz" for="field_cdtiUtz">Cdti Utz</label>
+                    <input type="text" class="form-control" name="cdtiUtz" id="field_cdtiUtz"
+                        [(ngModel)]="cutcUtzUbic.cdtiUtz" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbTiUtz" for="field_dbTiUtz">Db Ti Utz</label>
+                    <input type="text" class="form-control" name="dbTiUtz" id="field_dbTiUtz"
+                        [(ngModel)]="cutcUtzUbic.dbTiUtz" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.idBas11" for="field_idBas11">Id Bas 11</label>
+                    <input type="text" class="form-control" name="idBas11" id="field_idBas11"
+                        [(ngModel)]="cutcUtzUbic.idBas11" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.cdStrd" for="field_cdStrd">Cd Strd</label>
+                    <input type="text" class="form-control" name="cdStrd" id="field_cdStrd"
+                        [(ngModel)]="cutcUtzUbic.cdStrd" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbPosta" for="field_dbPosta">Db Posta</label>
+                    <input type="text" class="form-control" name="dbPosta" id="field_dbPosta"
+                        [(ngModel)]="cutcUtzUbic.dbPosta" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbAlfab" for="field_dbAlfab">Db Alfab</label>
+                    <input type="text" class="form-control" name="dbAlfab" id="field_dbAlfab"
+                        [(ngModel)]="cutcUtzUbic.dbAlfab" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbPercIni" for="field_dbPercIni">Db Perc Ini</label>
+                    <input type="text" class="form-control" name="dbPercIni" id="field_dbPercIni"
+                        [(ngModel)]="cutcUtzUbic.dbPercIni" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbPercFinal" for="field_dbPercFinal">Db Perc Final</label>
+                    <input type="text" class="form-control" name="dbPercFinal" id="field_dbPercFinal"
+                        [(ngModel)]="cutcUtzUbic.dbPercFinal" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dtCanc" for="field_dtCanc">Dt Canc</label>
+                    <input type="text" class="form-control" name="dtCanc" id="field_dtCanc"
+                        [(ngModel)]="cutcUtzUbic.dtCanc" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.niCiv" for="field_niCiv">Ni Civ</label>
+                    <input type="number" class="form-control" name="niCiv" id="field_niCiv"
+                        [(ngModel)]="cutcUtzUbic.niCiv" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbLetteCiv" for="field_dbLetteCiv">Db Lette Civ</label>
+                    <input type="text" class="form-control" name="dbLetteCiv" id="field_dbLetteCiv"
+                        [(ngModel)]="cutcUtzUbic.dbLetteCiv" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.tiColoreCiv" for="field_tiColoreCiv">Ti Colore Civ</label>
+                    <input type="text" class="form-control" name="tiColoreCiv" id="field_tiColoreCiv"
+                        [(ngModel)]="cutcUtzUbic.tiColoreCiv" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.cdUniUrb" for="field_cdUniUrb">Cd Uni Urb</label>
+                    <input type="text" class="form-control" name="cdUniUrb" id="field_cdUniUrb"
+                        [(ngModel)]="cutcUtzUbic.cdUniUrb" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbUniUrb" for="field_dbUniUrb">Db Uni Urb</label>
+                    <input type="text" class="form-control" name="dbUniUrb" id="field_dbUniUrb"
+                        [(ngModel)]="cutcUtzUbic.dbUniUrb" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.cdCircs" for="field_cdCircs">Cd Circs</label>
+                    <input type="text" class="form-control" name="cdCircs" id="field_cdCircs"
+                        [(ngModel)]="cutcUtzUbic.cdCircs" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbCircs" for="field_dbCircs">Db Circs</label>
+                    <input type="text" class="form-control" name="dbCircs" id="field_dbCircs"
+                        [(ngModel)]="cutcUtzUbic.dbCircs" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.cdCap" for="field_cdCap">Cd Cap</label>
+                    <input type="text" class="form-control" name="cdCap" id="field_cdCap"
+                        [(ngModel)]="cutcUtzUbic.cdCap" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.cdSezVig" for="field_cdSezVig">Cd Sez Vig</label>
+                    <input type="text" class="form-control" name="cdSezVig" id="field_cdSezVig"
+                        [(ngModel)]="cutcUtzUbic.cdSezVig" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbSezVig" for="field_dbSezVig">Db Sez Vig</label>
+                    <input type="text" class="form-control" name="dbSezVig" id="field_dbSezVig"
+                        [(ngModel)]="cutcUtzUbic.dbSezVig" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.niInterno" for="field_niInterno">Ni Interno</label>
+                    <input type="number" class="form-control" name="niInterno" id="field_niInterno"
+                        [(ngModel)]="cutcUtzUbic.niInterno" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbLetteInterno" for="field_dbLetteInterno">Db Lette Interno</label>
+                    <input type="text" class="form-control" name="dbLetteInterno" id="field_dbLetteInterno"
+                        [(ngModel)]="cutcUtzUbic.dbLetteInterno" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbInternoScala" for="field_dbInternoScala">Db Interno Scala</label>
+                    <input type="text" class="form-control" name="dbInternoScala" id="field_dbInternoScala"
+                        [(ngModel)]="cutcUtzUbic.dbInternoScala" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.flAllin" for="field_flAllin">Fl Allin</label>
+                    <input type="text" class="form-control" name="flAllin" id="field_flAllin"
+                        [(ngModel)]="cutcUtzUbic.flAllin" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.idEnte" for="field_idEnte">Id Ente</label>
+                    <input type="text" class="form-control" name="idEnte" id="field_idEnte"
+                        [(ngModel)]="cutcUtzUbic.idEnte" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dtUltAllin" for="field_dtUltAllin">Dt Ult Allin</label>
+                    <div class="d-flex">
+                        <input id="field_dtUltAllin" type="datetime-local" class="form-control" name="dtUltAllin" [(ngModel)]="dtUltAllin"
+                        />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.cutcUtzUbic.chiave" for="field_chiave">Chiave</label>
+                    <select class="form-control" id="field_chiave" name="chiave" [(ngModel)]="cutcUtzUbic.chiave" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="bbbaGeo01Option.id === cutcUtzUbic.chiave?.id ? cutcUtzUbic.chiave : bbbaGeo01Option" *ngFor="let bbbaGeo01Option of bbbageo01s; trackBy: trackBbbaGeo01ById">{{bbbaGeo01Option.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
