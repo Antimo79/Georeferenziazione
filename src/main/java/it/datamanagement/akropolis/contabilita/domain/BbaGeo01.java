@@ -11,7 +11,7 @@ import java.util.Objects;
  * A BbaGeo01.
  */
 @Entity
-@Table(name = "bba_geo_01")
+@Table(name = "BBA_GEO01_COORD")
 public class BbaGeo01 implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -19,7 +19,7 @@ public class BbaGeo01 implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
-    private Long id;
+    private String id;
 
     @Column(name = "coordx")
     private String coordx;
@@ -47,11 +47,11 @@ public class BbaGeo01 implements Serializable {
     private BbaGeo02Cl chiave;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
