@@ -1,0 +1,73 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-bba-geo-01-my-suffix-heading" jhiTranslate="georeferenziazioneApp.bbaGeo01.home.createOrEditLabel">Create or edit a Bba Geo 01</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!bbaGeo01.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="bbaGeo01.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.bbaGeo01.coordx" for="field_coordx">Coordx</label>
+                    <input type="text" class="form-control" name="coordx" id="field_coordx"
+                        [(ngModel)]="bbaGeo01.coordx" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.bbaGeo01.coordy" for="field_coordy">Coordy</label>
+                    <input type="text" class="form-control" name="coordy" id="field_coordy"
+                        [(ngModel)]="bbaGeo01.coordy" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.bbaGeo01.sisRif" for="field_sisRif">Sis Rif</label>
+                    <input type="text" class="form-control" name="sisRif" id="field_sisRif"
+                        [(ngModel)]="bbaGeo01.sisRif" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.bbaGeo01.idRecInt" for="field_idRecInt">Id Rec Int</label>
+                    <input type="text" class="form-control" name="idRecInt" id="field_idRecInt"
+                        [(ngModel)]="bbaGeo01.idRecInt" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.bbaGeo01.idRecEst" for="field_idRecEst">Id Rec Est</label>
+                    <input type="text" class="form-control" name="idRecEst" id="field_idRecEst"
+                        [(ngModel)]="bbaGeo01.idRecEst" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.bbaGeo01.idEnte" for="field_idEnte">Id Ente</label>
+                    <input type="text" class="form-control" name="idEnte" id="field_idEnte"
+                        [(ngModel)]="bbaGeo01.idEnte" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.bbaGeo01.idClasse" for="field_idClasse">Id Classe</label>
+                    <select class="form-control" id="field_idClasse" name="idClasse" [(ngModel)]="bbaGeo01.idClasse"  required>
+                        <option *ngIf="!editForm.value.idClasse" [ngValue]="null" selected></option>
+                        <option [ngValue]="bbaGeo02ClOption.id === bbaGeo01.idClasse?.id ? bbaGeo01.idClasse : bbaGeo02ClOption" *ngFor="let bbaGeo02ClOption of bbageo02cls; trackBy: trackBbaGeo02ClById">{{bbaGeo02ClOption.id}}</option>
+                    </select>
+                </div>
+                <div [hidden]="!(editForm.controls.idClasse?.dirty && editForm.controls.idClasse?.invalid)">
+                    <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.idClasse?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+                <div [hidden]="!(editForm.controls.idRecInt?.dirty && editForm.controls.idRecInt?.invalid)">
+                    <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.idRecInt?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                    </small>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

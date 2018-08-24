@@ -1,0 +1,29 @@
+
+{
+    "georeferenziazioneApp": {
+        "bbaGeo01" : {
+            "home": {
+                "title": "Bba Geo 01 S",
+                "createLabel": "Create a new Bba Geo 01",
+                "createOrEditLabel": "Create or edit a Bba Geo 01"
+            },
+            "created": "A new Bba Geo 01 is created with identifier {{ param }}",
+            "updated": "A Bba Geo 01 is updated with identifier {{ param }}",
+            "deleted": "A Bba Geo 01 is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Bba Geo 01 {{ id }}?"
+            },
+            "detail": {
+                "title": "Bba Geo 01"
+            },
+            "coordx": "Coordx",
+            "coordy": "Coordy",
+            "sisRif": "Sis Rif",
+            "idRecInt": "Id Rec Int",
+            "idRecEst": "Id Rec Est",
+            "idEnte": "Id Ente",
+            "idClasse": "Id Classe",
+            "idRecInt": "Id Rec Int"
+        }
+    }
+}
