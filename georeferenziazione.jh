@@ -1,0 +1,60 @@
+entity CutcUtzUbic {
+	id String,
+    dbCdUtz String,
+	idTiUtz String, 
+    cdTiUtz String, 
+    dbTiUtz String, 
+    idBas11 String, 
+    cdStrd String, 
+    dbPosta String, 
+    dbAlfab String, 
+    dbPercIni String, 
+    dbPercFinal String, 
+    dtCanc String, 
+    niCiv Integer, 
+    dbLetteCiv String, 
+    tiColoreCiv String, 
+    cdUniUrb String, 
+    dbUniUrb String, 
+    cdCircs String, 
+    dbCircs String, 
+    cdCap String, 
+    cdSezVig String, 
+    dbSezVig String, 
+    niInterno Integer, 
+    dbLetteInterno String, 
+    dbInternoScala String, 
+    flAllin String, 
+    idEnte String, 
+    dtUltAllin ZonedDateTime
+}
+
+entity BbaGeo01 {
+	id String,
+    coordx String,
+    coordy String,
+    sisRif String,
+    idRecInt String,
+    idRecEst String,
+    idEnte String
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity BbaGeo02Cl {
+	id String,
+	dbClasse String,
+    idApl String,
+    cdTiDocInde String,
+    dbNmClasse String,
+    dbClasse String,
+    idEnte String
+}
+relationship OneToMany {
+	BbaGeo02Cl{bbaGeo01} to BbaGeo01{idClasse(id) required}
+}
+
+// Set service options to all except few
+service all with serviceImpl
+// Set an angular suffix
+angularSuffix * with mySuffix
