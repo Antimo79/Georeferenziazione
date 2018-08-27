@@ -1,0 +1,48 @@
+{
+    "name": "BbaGeo01",
+    "fields": [
+        {
+            "fieldName": "coordx",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "coordy",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sisRif",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idRecInt",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idRecEst",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idEnte",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "idClasse",
+            "otherEntityName": "bbaGeo02Cl",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20180827093948",
+    "entityTableName": "bba_geo_01",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mySuffix"
+}
