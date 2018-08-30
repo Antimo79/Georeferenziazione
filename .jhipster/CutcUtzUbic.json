@@ -1,0 +1,124 @@
+{
+    "name": "CutcUtzUbic",
+    "fields": [
+        {
+            "fieldName": "dbCdUtz",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idTiUtz",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cdTiUtz",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dbTiUtz",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idBas11",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cdStrd",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dbPosta",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dbAlfab",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dbPercIni",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dbPercFinal",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dtCanc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "niCiv",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "dbLetteCiv",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tiColoreCiv",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cdUniUrb",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dbUniUrb",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cdCircs",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dbCircs",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cdCap",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cdSezVig",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dbSezVig",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "niInterno",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "dbLetteInterno",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dbInternoScala",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "flAllin",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idEnte",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dtUltAllin",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20180830143859",
+    "entityTableName": "cutc_utz_ubic",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
+    "angularJSSuffix": "mySuffix"
+}
