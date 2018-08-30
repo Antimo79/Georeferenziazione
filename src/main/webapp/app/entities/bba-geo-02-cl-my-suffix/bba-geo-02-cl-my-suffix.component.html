@@ -1,0 +1,62 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="georeferenziazioneApp.bbaGeo02Cl.home.title">Bba Geo 02 Cls</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-bba-geo-02-cl-my-suffix" [routerLink]="['/bba-geo-02-cl-my-suffix/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="georeferenziazioneApp.bbaGeo02Cl.home.createLabel">
+            Create new Bba Geo 02 Cl
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="bbaGeo02Cls">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.bbaGeo02Cl.dbClasse">Db Classe</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.bbaGeo02Cl.idApl">Id Apl</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.bbaGeo02Cl.cdTiDocInde">Cd Ti Doc Inde</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.bbaGeo02Cl.dbNmClasse">Db Nm Classe</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.bbaGeo02Cl.idEnte">Id Ente</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let bbaGeo02Cl of bbaGeo02Cls ;trackBy: trackId">
+                <td><a [routerLink]="['/bba-geo-02-cl-my-suffix', bbaGeo02Cl.id, 'view' ]">{{bbaGeo02Cl.id}}</a></td>
+                <td>{{bbaGeo02Cl.dbClasse}}</td>
+                <td>{{bbaGeo02Cl.idApl}}</td>
+                <td>{{bbaGeo02Cl.cdTiDocInde}}</td>
+                <td>{{bbaGeo02Cl.dbNmClasse}}</td>
+                <td>{{bbaGeo02Cl.idEnte}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/bba-geo-02-cl-my-suffix', bbaGeo02Cl.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/bba-geo-02-cl-my-suffix', bbaGeo02Cl.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'bba-geo-02-cl-my-suffix/'+ bbaGeo02Cl.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
