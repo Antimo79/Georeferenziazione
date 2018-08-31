@@ -1,0 +1,56 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-bba-geo-02-cl-my-suffix-heading" jhiTranslate="georeferenziazioneApp.bbaGeo02Cl.home.createOrEditLabel">Create or edit a Bba Geo 02 Cl</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!bbaGeo02Cl.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="bbaGeo02Cl.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.bbaGeo02Cl.dbClasse" for="field_dbClasse">Db Classe</label>
+                    <input type="text" class="form-control" name="dbClasse" id="field_dbClasse"
+                        [(ngModel)]="bbaGeo02Cl.dbClasse" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.bbaGeo02Cl.idApl" for="field_idApl">Id Apl</label>
+                    <input type="text" class="form-control" name="idApl" id="field_idApl"
+                        [(ngModel)]="bbaGeo02Cl.idApl" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.bbaGeo02Cl.cdTiDocInde" for="field_cdTiDocInde">Cd Ti Doc Inde</label>
+                    <input type="text" class="form-control" name="cdTiDocInde" id="field_cdTiDocInde"
+                        [(ngModel)]="bbaGeo02Cl.cdTiDocInde" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.bbaGeo02Cl.dbNmClasse" for="field_dbNmClasse">Db Nm Classe</label>
+                    <input type="text" class="form-control" name="dbNmClasse" id="field_dbNmClasse"
+                        [(ngModel)]="bbaGeo02Cl.dbNmClasse" />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.bbaGeo02Cl.idEnte" for="field_idEnte">Id Ente</label>
+                    <input type="text" class="form-control" name="idEnte" id="field_idEnte"
+                        [(ngModel)]="bbaGeo02Cl.idEnte" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="georeferenziazioneApp.bbaGeo02Cl.bbaGeo01" for="field_bbaGeo01">Bba Geo 01</label>
+                    <select class="form-control" id="field_bbaGeo01" name="bbaGeo01" [(ngModel)]="bbaGeo02Cl.bbaGeo01" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="bbaGeo01Option.id === bbaGeo02Cl.bbaGeo01?.id ? bbaGeo02Cl.bbaGeo01 : bbaGeo01Option" *ngFor="let bbaGeo01Option of bbageo01s; trackBy: trackBbaGeo01ById">{{bbaGeo01Option.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
