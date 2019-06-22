@@ -1,0 +1,112 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.home.title">Cutc Utz Ubics</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-cutc-utz-ubic-my-suffix" [routerLink]="['/cutc-utz-ubic-my-suffix/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="georeferenziazioneApp.cutcUtzUbic.home.createLabel">
+            Create new Cutc Utz Ubic
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="cutcUtzUbics">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbCdUtz">Db Cd Utz</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.idTiUtz">Id Ti Utz</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.cdtiUtz">Cdti Utz</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbTiUtz">Db Ti Utz</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.idBas11">Id Bas 11</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.cdStrd">Cd Strd</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbPosta">Db Posta</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbAlfab">Db Alfab</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbPercIni">Db Perc Ini</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbPercFinal">Db Perc Final</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dtCanc">Dt Canc</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.niCiv">Ni Civ</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbLetteCiv">Db Lette Civ</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.tiColoreCiv">Ti Colore Civ</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.cdUniUrb">Cd Uni Urb</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbUniUrb">Db Uni Urb</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.cdCircs">Cd Circs</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbCircs">Db Circs</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.cdCap">Cd Cap</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.cdSezVig">Cd Sez Vig</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbSezVig">Db Sez Vig</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.niInterno">Ni Interno</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbLetteInterno">Db Lette Interno</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dbInternoScala">Db Interno Scala</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.flAllin">Fl Allin</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.idEnte">Id Ente</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.dtUltAllin">Dt Ult Allin</span></th>
+            <th><span jhiTranslate="georeferenziazioneApp.cutcUtzUbic.chiave">Chiave</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let cutcUtzUbic of cutcUtzUbics ;trackBy: trackId">
+                <td><a [routerLink]="['/cutc-utz-ubic-my-suffix', cutcUtzUbic.id, 'view' ]">{{cutcUtzUbic.id}}</a></td>
+                <td>{{cutcUtzUbic.dbCdUtz}}</td>
+                <td>{{cutcUtzUbic.idTiUtz}}</td>
+                <td>{{cutcUtzUbic.cdtiUtz}}</td>
+                <td>{{cutcUtzUbic.dbTiUtz}}</td>
+                <td>{{cutcUtzUbic.idBas11}}</td>
+                <td>{{cutcUtzUbic.cdStrd}}</td>
+                <td>{{cutcUtzUbic.dbPosta}}</td>
+                <td>{{cutcUtzUbic.dbAlfab}}</td>
+                <td>{{cutcUtzUbic.dbPercIni}}</td>
+                <td>{{cutcUtzUbic.dbPercFinal}}</td>
+                <td>{{cutcUtzUbic.dtCanc}}</td>
+                <td>{{cutcUtzUbic.niCiv}}</td>
+                <td>{{cutcUtzUbic.dbLetteCiv}}</td>
+                <td>{{cutcUtzUbic.tiColoreCiv}}</td>
+                <td>{{cutcUtzUbic.cdUniUrb}}</td>
+                <td>{{cutcUtzUbic.dbUniUrb}}</td>
+                <td>{{cutcUtzUbic.cdCircs}}</td>
+                <td>{{cutcUtzUbic.dbCircs}}</td>
+                <td>{{cutcUtzUbic.cdCap}}</td>
+                <td>{{cutcUtzUbic.cdSezVig}}</td>
+                <td>{{cutcUtzUbic.dbSezVig}}</td>
+                <td>{{cutcUtzUbic.niInterno}}</td>
+                <td>{{cutcUtzUbic.dbLetteInterno}}</td>
+                <td>{{cutcUtzUbic.dbInternoScala}}</td>
+                <td>{{cutcUtzUbic.flAllin}}</td>
+                <td>{{cutcUtzUbic.idEnte}}</td>
+                <td>{{cutcUtzUbic.dtUltAllin | date:'medium'}}</td>
+                <td>
+                    <div *ngIf="cutcUtzUbic.chiave">
+                        <a [routerLink]="['../bba-geo-01-my-suffix', cutcUtzUbic.chiave?.id, 'view' ]" >{{cutcUtzUbic.chiave?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/cutc-utz-ubic-my-suffix', cutcUtzUbic.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/cutc-utz-ubic-my-suffix', cutcUtzUbic.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'cutc-utz-ubic-my-suffix/'+ cutcUtzUbic.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

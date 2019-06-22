@@ -1,0 +1,57 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="bbaGeo01">
+            <h2><span jhiTranslate="georeferenziazioneApp.bbaGeo01.detail.title">Bba Geo 01</span> {{bbaGeo01.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="georeferenziazioneApp.bbaGeo01.coordx">Coordx</span></dt>
+                <dd>
+                    <span>{{bbaGeo01.coordx}}</span>
+                </dd>
+                <dt><span jhiTranslate="georeferenziazioneApp.bbaGeo01.coordy">Coordy</span></dt>
+                <dd>
+                    <span>{{bbaGeo01.coordy}}</span>
+                </dd>
+                <dt><span jhiTranslate="georeferenziazioneApp.bbaGeo01.sisRif">Sis Rif</span></dt>
+                <dd>
+                    <span>{{bbaGeo01.sisRif}}</span>
+                </dd>
+                <dt><span jhiTranslate="georeferenziazioneApp.bbaGeo01.idRecInt">Id Rec Int</span></dt>
+                <dd>
+                    <span>{{bbaGeo01.idRecInt}}</span>
+                </dd>
+                <dt><span jhiTranslate="georeferenziazioneApp.bbaGeo01.idRecEst">Id Rec Est</span></dt>
+                <dd>
+                    <span>{{bbaGeo01.idRecEst}}</span>
+                </dd>
+                <dt><span jhiTranslate="georeferenziazioneApp.bbaGeo01.idEnte">Id Ente</span></dt>
+                <dd>
+                    <span>{{bbaGeo01.idEnte}}</span>
+                </dd>
+                <dt><span jhiTranslate="georeferenziazioneApp.bbaGeo01.idClasse">Id Classe</span></dt>
+                <dd>
+                    <span>{{bbaGeo01.idClasse}}</span>
+                </dd>
+                <dt><span jhiTranslate="georeferenziazioneApp.bbaGeo01.chiave">Chiave</span></dt>
+                <dd>
+                    <div *ngIf="bbaGeo01.chiave">
+                        <a [routerLink]="['/bba-geo-02-cl-my-suffix', bbaGeo01.chiave?.id, 'view']">{{bbaGeo01.chiave?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/bba-geo-01-my-suffix', bbaGeo01.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
